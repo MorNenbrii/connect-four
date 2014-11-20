@@ -29,7 +29,7 @@ class MorNenbrii implements PlayerInterface
      */
     public function move($grid)
     {
-        
-        return 2;
+        if (getColumn($grid, 1)[5] == 0) return 2;
+        else return getAvailableColumns($grid)[0];
     }
 }
